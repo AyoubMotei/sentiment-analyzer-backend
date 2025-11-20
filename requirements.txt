@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-jose[cryptography]
+python-multipart
+requests
+pydantic
+pytest
+httpx
+python-dotenv
+huggingface_hub
+pyjwt
+dotenv
+jose
