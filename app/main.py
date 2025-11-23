@@ -36,6 +36,7 @@ def root():
 def login_endpoint(request: LoginRequest):
     return login(request.username, request.password)
 
+
 @app.post("/predict")
 def predict_endpoint(request: PredictRequest, token: dict = Depends(verify_token)):
     try:
@@ -48,6 +49,7 @@ def predict_endpoint(request: PredictRequest, token: dict = Depends(verify_token
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.get("/test-env")
 def test_env():
