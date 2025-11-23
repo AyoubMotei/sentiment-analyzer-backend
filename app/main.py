@@ -53,7 +53,6 @@ def predict_endpoint(request: PredictRequest, token: dict = Depends(verify_token
 
 @app.get("/test-env")
 def test_env():
-    """Endpoint de test pour vérifier les variables d'environnement"""
     return {
         "hf_key_configured": bool(os.getenv("HF_API_KEY")),
         "jwt_secret_configured": bool(os.getenv("JWT_SECRET")),
